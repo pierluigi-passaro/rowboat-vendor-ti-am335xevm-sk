@@ -1,0 +1,5 @@
+# AM335XEVM-SK GPIO KEYPAD keylayout
+key 256   MENU		     WAKE
+key 257   HOME               WAKE
+key 258   BACK               WAKE
+key 259   SEARCH             WAKE
