@@ -102,4 +102,3 @@ $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
 $(call inherit-product-if-exists, hardware/ti/wlan/mac80211/firmware/wl12xx_wlan_fw_products.mk)
 $(call inherit-product-if-exists, hardware/ti/wpan/wl12xx-bluetooth/wl12xx_bt_products.mk)
 
-$(call inherit-product, rowboperf/rowboperf.mk)
