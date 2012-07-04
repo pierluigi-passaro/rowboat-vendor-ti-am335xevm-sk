@@ -285,6 +285,10 @@ on boot
 # Power Management Patches
     setprop hw.nopm true
 
+# Remove the red colour
+    setprop persist.sys.strictmode.visual 0
+    setprop persist.sys.strictmode.disable 1
+
 # Set this property so surfaceflinger is not started by system_init
     setprop system_init.startsurfaceflinger 0
 
