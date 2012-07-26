@@ -18,28 +18,16 @@
 PRODUCT_COPY_FILES := \
 	device/ti/am335xevm_sk/init.rc:root/init.rc \
 	device/ti/am335xevm_sk/ueventd.am335xevm_sk.rc:root/ueventd.am335xevm_sk.rc \
-	device/ti/am335xevm_sk/vold.fstab:system/etc/vold.fstab \
-	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-	frameworks/base/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
-
-# Bluetooth support
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-	system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
-
-# These are the hardware-specific features
-PRODUCT_COPY_FILES += \
-   frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml
+	device/ti/am335xevm_sk/vold.fstab:system/etc/vold.fstab
 
 # KeyPads
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 PRODUCT_PROPERTY_OVERRIDES := \
-	wifi.interface=wlan0 \
 	hwui.render_dirty_regions=false
 
-PRODUCT_CHARACTERISTICS := tablet,nosdcard
+PRODUCT_CHARACTERISTICS := tablet
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/ti/am335xevm_sk/overlay
@@ -64,21 +52,7 @@ PRODUCT_PACKAGES += \
         tinyplay
 
 PRODUCT_PACKAGES += \
-	dhcpcd.conf \
-	hostapd.conf \
-	TQS_D_1.7.ini \
-	calibrator
-
-
-# Sensors
-PRODUCT_PACKAGES += \
-   sensors.am335xevm
-
-#Camera
-PRODUCT_PACKAGES += \
-        camera.omap3 \
-        Camera
-
+	dhcpcd.conf
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -88,17 +62,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	hciconfig \
 	hcitool
-# Amazed Application : Accelerometer based game
-PRODUCT_PACKAGES += \
-	Amazed
 
-PRODUCT_PACKAGES += \
-	FileManager-1.1.6
-
-PRODUCT_PACKAGES += \
-	androidvncserver
-
-$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
-$(call inherit-product-if-exists, hardware/ti/wlan/mac80211/firmware/wl12xx_wlan_fw_products.mk)
-$(call inherit-product-if-exists, hardware/ti/wpan/wl12xx-bluetooth/wl12xx_bt_products.mk)
+$(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
