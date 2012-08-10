@@ -65,4 +65,5 @@ PRODUCT_PACKAGES += \
 	hcitool
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
+$(call inherit-product, external/tslib/tslib.mk)
 
