@@ -26,6 +26,11 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Bluetooth support
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
+	system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
+
 PRODUCT_PROPERTY_OVERRIDES := \
 	hwui.render_dirty_regions=false
 
@@ -71,4 +76,4 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, external/tslib/tslib.mk)
-
+$(call inherit-product-if-exists, hardware/ti/wpan/wl12xx-bluetooth/wl12xx_bt_products.mk)
