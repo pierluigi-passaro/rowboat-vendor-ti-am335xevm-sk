@@ -29,6 +29,10 @@ on post-fs-data
     # Do not suspend
     write /sys/power/wake_lock nosuspend
 
+on fs
+    # This board does not have battery, force battery-level to 100%
+    setprop hw.nobattery true
+
 on boot
 
 # Default Read Ahead value for sdcards
