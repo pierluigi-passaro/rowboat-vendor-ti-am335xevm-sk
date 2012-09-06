@@ -29,6 +29,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES := \
 	hwui.render_dirty_regions=false
 
+# Explicitly specify dpi, otherwise the icons don't show up correctly with SGX enabled
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.sf.lcd_density=120
+
 PRODUCT_CHARACTERISTICS := tablet
 
 DEVICE_PACKAGE_OVERLAYS := \
