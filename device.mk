@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
 	hciconfig \
 	hcitool
 
+PRODUCT_PACKAGES += \
+	lights.am335xevm_sk
+
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, external/tslib/tslib.mk)
 $(call inherit-product-if-exists, hardware/ti/wpan/wl12xx-bluetooth/wl12xx_bt_products.mk)
