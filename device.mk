@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
 	system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
 
+# Accelerometer support
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/android.hardware.sensor.accelerometer.xml
+
 PRODUCT_PROPERTY_OVERRIDES := \
 	hwui.render_dirty_regions=false
 
@@ -76,6 +80,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	lights.am335xevm_sk
+
+PRODUCT_PACKAGES += \
+	sensors.am335xevm
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, external/tslib/tslib.mk)

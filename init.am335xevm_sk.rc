@@ -42,6 +42,10 @@ on fs
     # Backlight
     chown system system /sys/class/backlight/pwm-backlight/brightness
 
+    # Accelerometer sensor lis3lv02d-->input1
+    chown system system /sys/class/input/input0/poll
+    chmod 0600 /sys/class/input/input0/poll
+
 service pvr /system/bin/sgx/rc.pvr start
     class core
     oneshot
