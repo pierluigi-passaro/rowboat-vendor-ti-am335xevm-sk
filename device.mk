@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	sensors.am335xevm
 
+PRODUCT_PACKAGES += \
+	Amazed \
+	FileManager-1.1.6
+
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, external/tslib/tslib.mk)
 $(call inherit-product-if-exists, hardware/ti/wpan/wl12xx-bluetooth/wl12xx_bt_products.mk)
