@@ -26,6 +26,11 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Audio: mixer paths and policy
+PRODUCT_COPY_FILES += \
+	device/ti/am335xevm_sk/mixer_paths.xml:system/etc/mixer_paths.xml \
+	device/ti/am335xevm_sk/audio_policy.conf:system/etc/audio_policy.conf
+
 # Bluetooth support
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \

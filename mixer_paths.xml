@@ -1,0 +1,20 @@
+<mixer>
+  <!-- These are the initial mixer settings -->
+  <ctl name="DAC IF1 SWITCH" value="Normal" />
+
+  <path name="speaker">
+    <ctl name="PCM Playback Volume" value="120" />
+  </path>
+
+  <path name="headphone">
+    <ctl name="PCM Playback Volume" value="120" />
+  </path>
+
+
+  <path name="headset-mic">
+    <ctl name="Mic Jack Switch" value="1" />
+    <ctl name="Analog Left AUXL Capture Switch" value="1" />
+    <ctl name="Analog Right AUXR Capture Switch" value="1" />
+    <ctl name="Analog Capture Volume" value="3"/>
+   </path>
+</mixer>
