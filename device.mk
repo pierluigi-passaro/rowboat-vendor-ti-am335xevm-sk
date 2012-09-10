@@ -47,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=120
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/ti/am335xevm_sk/overlay
