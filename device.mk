@@ -38,7 +38,7 @@ PRODUCT_COPY_FILES += \
 
 # Accelerometer support
 PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/android.hardware.sensor.accelerometer.xml
+	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	hwui.render_dirty_regions=false \
