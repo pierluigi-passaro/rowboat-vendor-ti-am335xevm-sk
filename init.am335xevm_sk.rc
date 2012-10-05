@@ -43,6 +43,13 @@ on fs
     chown system system /sys/class/input/input0/poll
     chmod 0600 /sys/class/input/input0/poll
 
+# Restart adbd after android is ready. Otherwise the host does not detect the device
+# when booted with USB cable attached.
+on property:dev.bootcomplete=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1
+
 service pvr /system/bin/sgx/rc.pvr start
     class core
     oneshot
