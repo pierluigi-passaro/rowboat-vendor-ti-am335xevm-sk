@@ -36,6 +36,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
 	system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
 
+# WLAN support
+PRODUCT_COPY_FILES +=\
+	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
+
 # Accelerometer support
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml
@@ -65,6 +69,19 @@ PRODUCT_PACKAGES += \
 # Bluetooth A2DP audio support
 PRODUCT_PACKAGES += \
 	audio.a2dp.default
+
+# WI-Fi
+PRODUCT_PACKAGES += \
+       hostapd.conf \
+       wifical.sh \
+       TQS_D_1.7.ini \
+       TQS_D_1.7_127x.ini \
+       crda \
+       regulatory.bin \
+       calibrator
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        wifi.interface=wlan0
 
 PRODUCT_PACKAGES += \
         audio.primary.am335xevm \
@@ -97,3 +114,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, external/tslib/tslib.mk)
 $(call inherit-product-if-exists, hardware/ti/wpan/wl12xx-bluetooth/wl12xx_bt_products.mk)
+$(call inherit-product-if-exists, hardware/ti/wlan/mac80211/firmware/wl12xx_wlan_fw_products.mk)
