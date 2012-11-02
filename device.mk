@@ -77,6 +77,7 @@ PRODUCT_PACKAGES += \
        wifical.sh \
        TQS_D_1.7.ini \
        TQS_D_1.7_127x.ini \
+       TQS_S_2.6.ini \
        crda \
        regulatory.bin \
        calibrator
