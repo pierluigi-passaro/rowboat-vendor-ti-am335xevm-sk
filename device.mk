@@ -18,7 +18,7 @@
 PRODUCT_COPY_FILES := \
 	device/ti/am335xevm_sk/init.am335xevm_sk.rc:root/init.am335xevm.rc \
 	device/ti/am335xevm_sk/init.am335xevm_sk.usb.rc:root/init.am335xevm_sk.usb.rc \
-	device/ti/am335xevm_sk/ueventd.am335xevm_sk.rc:root/ueventd.am335xevm_sk.rc \
+	device/ti/am335xevm_sk/ueventd.am335xevm.rc:root/ueventd.am335xevm.rc \
 	device/ti/am335xevm_sk/vold.fstab:system/etc/vold.fstab \
 	device/ti/am335xevm_sk/media_codecs.xml:system/etc/media_codecs.xml
 
@@ -66,6 +66,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	libaudioutils
+
+PRODUCT_PACKAGES += \
+        camera.omap3
 
 # Bluetooth A2DP audio support
 PRODUCT_PACKAGES += \

@@ -17,6 +17,7 @@ on early-init
 
 on post-fs-data
     mkdir /data/misc/dhcp 0770 dhcp dhcp
+    mkdir /data/misc/camera 0770 media media
     chown dhcp dhcp /data/misc/dhcp
 
     # we will remap this as /storage/sdcard0 with the sdcard fuse tool
