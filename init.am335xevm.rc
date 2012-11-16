@@ -1,4 +1,4 @@
-import init.am335xevm_sk.usb.rc
+import init.am335xevm.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
