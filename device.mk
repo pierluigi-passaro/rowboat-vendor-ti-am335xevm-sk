@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES := \
 	device/ti/am335xevm_sk/init.am335xevm.usb.rc:root/init.am335xevm.usb.rc \
 	device/ti/am335xevm_sk/ueventd.am335xevm.rc:root/ueventd.am335xevm.rc \
 	device/ti/am335xevm_sk/vold.fstab:system/etc/vold.fstab \
+	device/ti/am335xevm/fstab.am335xevm:root/fstab.am335xevm \
 	device/ti/am335xevm_sk/media_codecs.xml:system/etc/media_codecs.xml
 
 # KeyPads
