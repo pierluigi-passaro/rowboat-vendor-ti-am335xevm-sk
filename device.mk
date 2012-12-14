@@ -77,6 +77,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         camera.omap3
 
+# BT
+PRODUCT_PACKAGES += \
+	libbt-vendor
+
 # Bluetooth A2DP audio support
 PRODUCT_PACKAGES += \
 	audio.a2dp.default
