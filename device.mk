@@ -26,6 +26,11 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
 	device/ti/am335xevm_sk/apns-full-conf.xml:system/etc/apns-conf.xml
 
+PRODUCT_COPY_FILES += \
+	device/ti/am335xevm_sk/ppp/ip-up-datakey:system/etc/ppp/ip-up-datakey \
+	device/ti/am335xevm_sk/ppp/ip-down-datakey:system/etc/ppp/ip-down-datakey \
+	device/ti/am335xevm_sk/usbmodeswitch.conf:system/etc/usbmodeswitch.conf
+
 # KeyPads
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
