@@ -27,6 +27,9 @@ PRODUCT_COPY_FILES += \
 	device/ti/am335xevm_sk/apns-full-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+PRODUCT_COPY_FILES += \
 	device/ti/am335xevm_sk/ppp/ip-up-datakey:system/etc/ppp/ip-up-datakey \
 	device/ti/am335xevm_sk/ppp/ip-down-datakey:system/etc/ppp/ip-down-datakey \
 	device/ti/am335xevm_sk/usbmodeswitch.conf:system/etc/usbmodeswitch.conf
