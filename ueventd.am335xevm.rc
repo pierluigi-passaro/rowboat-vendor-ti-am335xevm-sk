@@ -2,3 +2,7 @@
 
 # for Bluetooth
 /dev/hci_tty              0666   bluetooth bluetooth
+
+/dev/ttyUSB0	0660	radio	radio
+/dev/ttyUSB1	0660	radio	radio
+/dev/ttyUSB2	0660	radio	radio
