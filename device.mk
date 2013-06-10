@@ -21,7 +21,9 @@ PRODUCT_COPY_FILES := \
 	device/ti/am335xevm_sk/ueventd.am335xevm.rc:root/ueventd.am335xevm.rc \
 	device/ti/am335xevm_sk/vold.fstab:system/etc/vold.fstab \
 	device/ti/am335xevm/fstab.am335xevm:root/fstab.am335xevm \
-	device/ti/am335xevm_sk/media_codecs.xml:system/etc/media_codecs.xml
+	device/ti/am335xevm_sk/media_codecs.xml:system/etc/media_codecs.xml \
+	device/ti/am335xevm_sk/media_profiles.xml:system/etc/media_profiles.xml
+
 
 PRODUCT_COPY_FILES += \
 	device/ti/am335xevm_sk/apns-full-conf.xml:system/etc/apns-conf.xml
