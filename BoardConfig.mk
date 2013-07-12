@@ -69,6 +69,7 @@ BOARD_WLAN_DEVICE                := wl12xx_mac80211
 BOARD_SOFTAP_DEVICE              := wl12xx_mac80211
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wl12xx_sdio.ko"
 WIFI_DRIVER_MODULE_NAME          := "wl12xx_sdio"
+CALIBRATOR                       := WL12xx
 WIFI_FIRMWARE_LOADER             := ""
 COMMON_GLOBAL_CFLAGS += -DUSES_TI_MAC80211
 endif
